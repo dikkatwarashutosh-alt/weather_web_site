@@ -9,7 +9,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #4aa3f0;
+    background-color: #5fb4ff;
     /* light blue background */
 }
 
@@ -91,7 +91,7 @@ body {
     margin-top: 10PX;
 }
 
-.humadity{
+.humidity{
     width: 50%;
     height: auto;
     display: flex;

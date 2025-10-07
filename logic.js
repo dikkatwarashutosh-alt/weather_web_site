@@ -30,7 +30,9 @@ submit_btn.addEventListener("click", async () => {
             location: data.location.name,
             temperature: data.current.temp_c,
             condition: "https:" + data.current.condition.icon,
-            cloud_condition: data.current.condition.text
+            cloud_condition: data.current.condition.text,
+            humidity:data.current.humidity,
+            cloud:data.current.cloud
         };
 
         // Save data for next.html
