@@ -19,7 +19,7 @@ submit_btn.addEventListener("click", async () => {
 
     }
 
-    const url = `http://api.weatherapi.com/v1/current.json?key=d829f60291da4cfc9ea125607250410 &q=${user_input}`;
+    const url = `https://api.weatherapi.com/v1/current.json?key=d829f60291da4cfc9ea125607250410 &q=${user_input}`;
 
     try {
         const response = await fetch(url);
