@@ -1,0 +1,98 @@
+
+    /* Reset and body styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #4aa3f0; /* light blue background */
+    }
+
+    /* Outer card */
+    .outer {
+      width: 350px;
+      padding: 30px 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Title */
+    .outer label {
+      font-size: 20px;
+      font-weight: bold;
+      color: #4aa3f0;
+      margin-bottom: 20px;
+    }
+
+    /* Input field */
+  #input_box{
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 15px;
+      font-size: 14px;
+      outline: #3985d1;
+    }
+
+    /* Divider text "or" */
+    .divider {
+      width: 100%;
+      text-align: center;
+      margin: 10px 0;
+      font-size: 14px;
+      color: #888;
+      position: relative;
+    }
+
+    .divider::before,
+    .divider::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 40%;
+      height: 1px;
+      background-color: #ccc;
+    }
+
+    .divider::before {
+      left: 0;
+    }
+
+    .divider::after {
+      right: 0;
+    }
+
+    /* Button */
+    .outer button {
+      width: 100%;
+      padding: 12px;
+      background-color: #4aa3f0;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .outer button:hover {
+      background-color: #3985d1;
+    }
+
+    .outer input:hover{
+        outline-color: #3985d1;
+        border-color: #3985d1;
+    }
+  

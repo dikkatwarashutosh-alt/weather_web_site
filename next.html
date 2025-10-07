@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="next.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+</head>
+
+<body>
+
+    <div id="main">
+        <div id="header">
+            <button id="back_btn"><i class="fa-solid fa-arrow-left"></i></button>
+            <label>Weather App</label>
+        </div>
+
+        <div id="body">
+            <img src="data:image/png;base64,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"
+                alt="image" id="icon">
+            <label id="temp_C">13c</label>
+            <label id="broken_cloud">Broken cloud</label>
+            <label id="location">Location</label>
+        </div>
+
+        <div id="footer">
+            <div class="humadity">
+                Humadity
+            </div>
+
+            <div class="cloudy">
+                cloudy
+            </div>
+        </div>
+
+    </div>
+
+   <script src="next.js"></script>
+</body>
+
+</html>
