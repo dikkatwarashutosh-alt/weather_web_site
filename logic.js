@@ -1,5 +1,6 @@
 let submit_btn = document.getElementById("submit_btn");
 let input_box = document.getElementById("input_box");
+let map_btn=document.getElementById("map_btn");
 
 
 
@@ -47,9 +48,13 @@ submit_btn.addEventListener("click", async () => {
     }
 
 
-
+    
 });
 
+
+map_btn.addEventListener("click",()=>{
+    window.location.href="map.html";
+})
 
 
 
