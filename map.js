@@ -1,6 +1,17 @@
 let check_btn = document.getElementById("check_btn");
 
+// Create map
+var map = L.map('map', {
+  scrollWheelZoom: true, // enable zooming with scroll
+  dragging: true         // enable dragging
+}).setView([28.6139, 77.2090], 10);
 
+// Add OpenStreetMap tiles
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '© OpenStreetMap contributors'
+}).addTo(map);
+
+var marker = L.marker([28.6139, 77.2090]).addTo(map);
 
 async function getWeather(lat, lng) {
   const url = `https://api.weatherapi.com/v1/current.json?key=d829f60291da4cfc9ea125607250410&q=${lat},${lng}`;
@@ -45,6 +56,10 @@ if (navigator.geolocation) {
       const lat = position.coords.latitude;
       const lng = position.coords.longitude;
 
+      map.setView([lat,lng],10);
+      marker.setLatLng([lat,lng]);
+      document.getElementById("output").innerText="Latitude: " + lat + " | Longitude: " + lng;
+
       getWeather(lat, lng);
     },
     () => {
@@ -56,18 +71,6 @@ if (navigator.geolocation) {
 }
 
 
-// Create map
-var map = L.map('map', {
-  scrollWheelZoom: true, // enable zooming with scroll
-  dragging: true         // enable dragging
-}).setView([lat, lat], 10);
-
-// Add OpenStreetMap tiles
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution: '© OpenStreetMap contributors'
-}).addTo(map);
-
-var marker = L.marker([lat, lat]).addTo(map);
 
 
 // On map click
